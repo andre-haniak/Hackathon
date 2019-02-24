@@ -1,22 +1,36 @@
+let userController = new UserController('form-user-create');
+
+let menuController = new MenuController('topMenu');
+var body = document.getElementById('div-body')
+
+
+/** função para ocultar as telas */
+
+
+
+
+
+/*
 var home = document.getElementById('div-home')
 var navBar = document.getElementById('navBar')
 var logon = document.getElementById('div-logon')
-var body = document.getElementById('div-body')
 var company = document.getElementById('div-company')
 
-
 home.querySelector('#btn-register').addEventListener('click', e => {
-    console.log('novo')
     e.preventDefault();
     hidinElChildren();
     
 })
 home.querySelector('#btn-search').addEventListener('click', e =>{
-    console.log('buscar')
     e.preventDefault();
-    hidinElChildren();
     
 })
+home.querySelector('#btn-RealizarLogin').addEventListener('click', e =>{
+    e.preventDefault();
+    hidinElChildren();
+    console.log('Efetuando login...')
+})
+
 navBar.querySelector('#btn-login').addEventListener('click', e => {
     e.preventDefault();
     let btn = navBar.querySelector("#btn-login")
@@ -29,32 +43,36 @@ navBar.querySelector('#btn-login').addEventListener('click', e => {
         home.style.display='block'
     }
     
+    clearSelection('');
 })
 navBar.querySelector('#btn-company').addEventListener('click', e =>{
-    console.log('company')
     e.preventDefault();
     hidinElChildren();
-    clearSelection();
+    clearSelection(e.target.parentElement);
     company.style.display='block';
 })
 navBar.querySelector('#btn-home').addEventListener('click', e =>{
-    console.log('home')
     e.preventDefault();
     hidinElChildren();
-    console.log(home)
+    clearSelection(e.target.parentElement);
+    home.style.display='block';
 })
+*/
+/** função para ocultar as telas */
+/*
 function hidinElChildren(){
     for(let index = 0; index <body.children.length; index++){
         body.children[index].style.display= 'none'
     }
-}
+}*/
 
-function clearSelection(){
+/** função responsável por limpar seleção */
+/*
+function clearSelection(value){
     let links = document.getElementById('ListLink').children;
     for(let index = 0; index < links.length; index++){
         
         links[index].className = ''
     }
-
-   console.dir(links)
-}
+    value.className = 'active';
+}*/
