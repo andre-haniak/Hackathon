@@ -1,265 +1,218 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
 
-    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
-    </script>
-    <link rel="stylesheet" href="./css/style.css">
-    </script>
-    <style></style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Justice Link</title>
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./materialize/css/materialize.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 
-<body>
+<body >
+
     <div>
-        <div>
-            <nav id="navBar" class="navbar navbar-default navbar-fixed-top">
-                <div class="container">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="#">Justice Link</a>
-                    </div>
-
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul id="ListLink" class="nav navbar-nav">
-                            <li class="active"><a id="btn-home" href="#">Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li><a href="#" id="btn-company">Instituições</a></li>
-
-                        </ul>
-
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a id="btn-login" href="#">Login</a></li>
-
-                        </ul>
-                    </div><!-- /.navbar-collapse -->
-            </nav>
-        </div>
-        <div id="div-body" class="container">
-
-            <!-- Div Home page-->
-            <div id="div-home">
-                <button id="btn-register" type="button" class="btn btn-success btn-lg">
-                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Star
-                </button>
-
-                <button id="btn-search" type="button" class="btn btn-info btn-lg">
-                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Star
-                </button>
-
+        <nav id="topMenu" class="primariColor">
+            
+            <div class="nav-wrapper">
+                <!--
+                <a href="#" class="brand-logo"></a>
+                -->
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li id="btn-login"><a href="sass.html" style="margin-right:200px">Login</a></li>
+                   <!--
+                    <li><a href="badges.html">Components</a></li>
+                    <li><a href="collapsible.html">JavaScript</a></li>
+                -->
+                </ul>
             </div>
+        </nav>
 
-            <!-- Div Logon -->
-            <div id="div-logon" style="display:none;">
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3">
-                        <div class="panel panel-login">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-6">
-                                        <a href="#" class="active" id="login-form-link">Login</a>
-                                    </div>
-                                </div>
-                                <hr>
-                            </div>
-                            <div class="panel-body">
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <form id="login-form" action="https://phpoll.com/login/process" method="post"
-                                            role="form" style="display: block;">
-                                            <div class="form-group">
-                                                <input type="text" name="username" id="username" tabindex="1"
-                                                    class="form-control" placeholder="Username" value="">
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="password" name="password" id="password" tabindex="2"
-                                                    class="form-control" placeholder="Password">
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="row">
-                                                    <div class="col-sm-6 col-sm-offset-3">
-                                                        <input type="submit" name="login-submit" id="login-submit"
-                                                            tabindex="4" class="form-control btn btn-success"
-                                                            value="Log In">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                        <form id="register-form" method="post" role="form" style="display: none;">
-                                            <div class="form-group">
-                                                <input type="text" name="username" id="username" tabindex="1"
-                                                    class="form-control" placeholder="Username" value="">
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="email" name="email" id="email" tabindex="1"
-                                                    class="form-control" placeholder="Email Address" value="">
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="password" name="password" id="password" tabindex="2"
-                                                    class="form-control" placeholder="Password">
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="password" name="confirm-password" id="confirm-password"
-                                                    tabindex="2" class="form-control" placeholder="Confirm Password">
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="row">
-                                                    <div class="col-sm-6 col-sm-offset-3">
-                                                        <input type="submit" name="register-submit" id="register-submit"
-                                                            tabindex="4" class="form-control btn btn-register"
-                                                            value="Register Now">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
+    </div>
+
+    <div id="div-body" class="container">
+        <!-- Div Home page-->
+        <div id="div-cadastro" style="">
+
+
+            <div class="row">
+                <div class="col s12">
+                    <div class="col s6"> <!-- tex g 52  peq 18px  Altura do header 70px-->
+                        <p class="titleCadastro">Acesso à assistência júridica gratuita, ágil e eficiente?
+                             <br>Essa é a nossa missão. </p>
+                             <p class="textoCadastro">Coordena um núcleo de Práticas Jurídicas? Experimente nossa ferramenta de gestão de processos. 
+                                 <a href="#"><strong> Cadastre-se-aqui.</strong></a></p>
+                    </div>
+                    <div class="col s1">
+                    </div>
+                    <form class="col s5" id="form-user-create" >
+                            <br>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="cpf" type="text" class="validate" number>
+                                <label for="cpf">CPF</label>
                             </div>
                         </div>
-                    </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="name" type="text" class="validate">
+                                <label for="name">Nome Completo</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s7">
+                                <input id="birth" type="text" class="validate">
+                                <label for="birth">Data de Nascimento</label>
+
+                            </div>
+                            <div class="input-field col s5">
+                                <input id="estadoCivil" type="text" class="validate">
+                                <label for="estadoCivil">Estado Civil</label>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s7">
+                                <input id="telefone" type="text" class="validate">
+                                <label for="telefone">Telefone</label>
+
+                            </div>
+                            <div class="input-field col s5">
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s5">
+                                <input id="cep" type="text" class="validate">
+                                <label for="cep">CEP</label>
+
+                            </div>
+                            <div class="input-field col s7">
+                                <input id="cidade" type="text" class="validate">
+                                <label for="cidade">Cidade</label>
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s9">
+                                <input id="rua" type="text" class="validate">
+                                <label for="rua">Rua</label>
+                            </div>
+                            <div class="input-field col s3">
+                                <input id="numero" type="text" class="validate">
+                                <label for="numero">Nº</label>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="input-field col s7">
+                                <input id="bairro" type="text" class="validate">
+                                <label for="bairro">Bairro</label>
+
+                            </div>
+                            <div class="input-field col s5">
+                                <input id="complemento" type="text" class="validate">
+                                <label for="complemento">Complemento</label>
+
+                            </div>
+                        </div>
+
+                        <!-- #f6f6f6 
+                        
+                            Superior
+                        #4cb5ab
+                        
+                        <a class="waves-effect waves-light btn"  type="submit">button</a>
+                    -->
+                    <button class="waves-effect waves-light btn primariColor" type="submit"> Buscar núcleos disponível</button>
+                    
+                    <p class="colorText" style="text-align:center"><strong> Já tem cadastro? Veja os núcleos disponíveis para você.</strong></p>
+                
+                
+                </form>
                 </div>
 
 
 
+
             </div>
-
-            <div id="div-company" style="display:none;">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <div class="box-part text-center">
-                            <img alt="100%x180" data-src="holder.js/100%x180" src="./dist/boxed-bg.jpg"
-                                data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
-                            <div class="title">
-                                <h4>Instagram</h4>
-                            </div>
-                            <div class="text">
-                                <span>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam. Assum decore te sed. Elitr
-                                    scripta ocurreret qui ad.</span>
-                            </div>
-                            <a href="#">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <div class="box-part text-center">
-                            <img alt="100%x180" data-src="holder.js/100%x180" src="./dist/boxed-bg.jpg"
-                                data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
-                            <div class="title">
-                                <h4>Instagram</h4>
-                            </div>
-                            <div class="text">
-                                <span>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam. Assum decore te sed. Elitr
-                                    scripta ocurreret qui ad.</span>
-                            </div>
-                            <a href="#">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <div class="box-part text-center">
-                            <img alt="100%x180" data-src="holder.js/100%x180" src="./dist/boxed-bg.jpg"
-                                data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
-                            <div class="title">
-                                <h4>Instagram</h4>
-                            </div>
-                            <div class="text">
-                                <span>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam. Assum decore te sed. Elitr
-                                    scripta ocurreret qui ad.</span>
-                            </div>
-                            <a href="#">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <div class="box-part text-center">
-                            <img alt="100%x180" data-src="holder.js/100%x180" src="./dist/boxed-bg.jpg"
-                                data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
-                            <div class="title">
-                                <h4>Instagram</h4>
-                            </div>
-                            <div class="text">
-                                <span>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam. Assum decore te sed. Elitr
-                                    scripta ocurreret qui ad.</span>
-                            </div>
-                            <a href="#">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <div class="box-part text-center">
-                            <img alt="100%x180" data-src="holder.js/100%x180" src="./dist/boxed-bg.jpg"
-                                data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
-                            <div class="title">
-                                <h4>Instagram</h4>
-                            </div>
-                            <div class="text">
-                                <span>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam. Assum decore te sed. Elitr
-                                    scripta ocurreret qui ad.</span>
-                            </div>
-                            <a href="#">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <div class="box-part text-center">
-                            <img alt="100%x180" data-src="holder.js/100%x180" src="./dist/boxed-bg.jpg"
-                                data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
-                            <div class="title">
-                                <h4>Instagram</h4>
-                            </div>
-                            <div class="text">
-                                <span>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam. Assum decore te sed. Elitr
-                                    scripta ocurreret qui ad.</span>
-                            </div>
-                            <a href="#">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <div class="box-part text-center">
-                            <img alt="100%x180" data-src="holder.js/100%x180" src="./dist/boxed-bg.jpg"
-                                data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
-                            <div class="title">
-                                <h4>Instagram</h4>
-                            </div>
-                            <div class="text">
-                                <span>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam. Assum decore te sed. Elitr
-                                    scripta ocurreret qui ad.</span>
-                            </div>
-                            <a href="#">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
+        </div>
+        <div id="div-localizacao-nucleo">
 
         </div>
-    </div>
-    <!-- Footer -->
-    <footer class="myfooter">
 
+        <!-- Div Logon -->
+        <div id="div-logon" style="display:none;">
+            
+                <div class="z-depth-1 grey lighten-4 row userLogin" >
 
+                        <form class="col s12" method="post">
+                          <div class='row'>
+                            <div class='col s12'>
+                            </div>
+                          </div>
+              
+                          <div class='row'>
+                            <div class='input-field col s12'>
+                              <input class='validate' type='email' name='email' id='email' />
+                              <label for='email'>Enter your email</label>
+                            </div>
+                          </div>
+              
+                          <div class='row'>
+                            <div class='input-field col s12'>
+                              <input class='validate' type='password' name='password' id='password' />
+                              <label for='password'>Enter your password</label>
+                            </div>
+                            
+                          </div>
+              
+                          <br />
+                          <br />
+                          <br />
+                          <center>
+                            <div class='row'>
+                              <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo primariColor'>Login</button>
+                            </div>
+                          </center>
+                        </form>
+                      </div>
+                    </div>
 
-        <div class="footer-copyright text-center py-3">© 2018 Copyright:
-            <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
         </div>
-        <!-- Copyright -->
-        <br />
 
-    </footer>
+
+
+
+        <div id="div-company" style="display:none;">
+
+        </div>
+
+
 
 
     </div>
-    <script src="./js/jQuery.js"></script>
-    <script src="./bootstrap/js/bootstrap.min.js"></script>
-    <script src="./js/index.js"></script>
+   
+
+
+    <script src="./js/jquery.js"></script>
+    <script type="text/javascript" src="./materialize/js/materialize.min.js"></script>
+    <script src="./models/User.js"></script>
+    <script src="./controller/UserController.js"></script>
+    <script src="./controller/MenuControler.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
 </body>
 
 </html>
