@@ -45,7 +45,7 @@
 
     <div id="div-body" class="container">
         <!-- Div Home page-->
-        <div id="div-cadastro" style="">
+        <div id="div-cadastro" style="display: none">
 
 
             <div class="row">
@@ -149,6 +149,7 @@
 
 
                     </form>
+
                 </div>
 
 
@@ -156,67 +157,179 @@
 
             </div>
         </div>
+
+        <!--Div-Company-->
         <div id="div-localizacao-nucleo">
+            <div class="row">
+                <div class="col s12">
+                    <div id="categorias" class="col s4">
+                        <p class="titlecompany">Como podemos te ajudar?</p>
+                        <p class="textocompany">Selecione uma das opções jurídicas disponíveis na sua região.</p>
 
-        </div>
-
-        <!-- Div Logon -->
-        <div id="div-logon" style="display:none;">
-
-            <div class="z-depth-1 grey lighten-4 row userLogin" style="background-color: #ffffff!important;">
-                <form class="col s12" method="post">
-                    <div class='row'>
-                        <div class='col s12'>
+                        <br>
+                        <div class="row">
+                            <div>
+                                <button type="menu" class="waves-effect waves-teal btn primariColor btn-field" name="btn-family">Direito
+                                    de Familia</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="btn-fieldsub">
+                                <button type="menu" class="waves-effect waves-teal btn-flat" name="btn-family">Guarda
+                                    de menor</button>
+                            </div>
+                            <div class="btn-fieldsub">
+                                <button type="menu" class="waves-effect waves-teal btn-flat" name="btn-family">Divórcio</button>
+                            </div>
+                            <div class="row"></div>
+                            <div class="btn-fieldsub">
+                                <button type="menu" class="waves-effect waves-teal btn-flat" name="btn-family">Paternidade</button>
+                            </div>
+                            <div class="btn-fieldsub">
+                                <button type="menu" class="waves-effect waves-teal btn-flat" name="btn-family">Pensão</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div>
+                                <button type="menu" class="waves-effect waves-light btn crimeColor btn-field" name="btn-family">Direito
+                                    Criminal</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="btn-crimesub">
+                                <button type="menu" class="waves-effect waves-teal btn-flat" name="btn-crime">Direito
+                                    Criminal relacionado a familiar</button>
+                            </div>
+                            <div class="row"></div>
+                            <div class="btn-crimesub">
+                                <button type="menu" class="waves-effect waves-teal btn-flat" name="btn-crime">Veja
+                                    quais documentos você precisa levar</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div>
+                                <button type="menu" class="waves-effect waves-teal btn consumerColor btn-field" name="btn-Consumer">Direito
+                                    do Consumidor</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="btn-Consumersub">
+                                <button type="menu" class="waves-effect waves-teal btn-flat" name="btn-Consumer">Veja
+                                    os núcleos de atendimento ao cliente</button>
+                            </div>
                         </div>
                     </div>
-                    <div class='row'>
-                        <div class='input-field col s12'>
-                            <input class='validate' type='text' name='cpf' id='cpf' />
-                            <label for='cpf'>Digite seu CPF</label>
-                        </div>
+                    <div class="col s1"></div>
+                    <div class="col s7" id="map">
+                        <script>
+                            // Note: This example requires that you consent to location sharing when
+                                        // prompted by your browser. If you see the error "The Geolocation service
+                                        // failed.", it means you probably did not give permission for the browser to
+                                        // locate you.
+                                        var map, infoWindow;
+                                        function initMap() {
+                                            map = new google.maps.Map(document.getElementById('map'), {
+                                                center: {lat: -34.397, lng: 150.644},
+                                                zoom: 6
+                                            });
+                                    infoWindow = new google.maps.InfoWindow;
+                                    
+                                    // Try HTML5 geolocation.
+                                    if (navigator.geolocation) {
+                                        navigator.geolocation.getCurrentPosition(function(position) {
+                                            var pos = {
+                                                lat: position.coords.latitude,
+                                                lng: position.coords.longitude
+                                            };
+                                            
+                                            infoWindow.setPosition(pos);
+                                            infoWindow.setContent('Location found.');
+                                            infoWindow.open(map);
+                                            map.setCenter(pos);
+                                        }, function() {
+                                            handleLocationError(true, infoWindow, map.getCenter());
+                                        });
+                                    } else {
+                                        // Browser doesn't support Geolocation
+                                        handleLocationError(false, infoWindow, map.getCenter());
+                                    }
+                                }
+                                
+                                function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+                                    infoWindow.setPosition(pos);
+                                    infoWindow.setContent(browserHasGeolocation ?
+                                    'Error: The Geolocation service failed.' :
+                                    'Error: Your browser doesn\'t support geolocation.');
+                                    infoWindow.open(map);
+                                }
+                                </script>
+                        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAj3yyTFzUhrdSbEjq6ULFI5IRs8faQCcY&callback=initMap">
+                        </script>
                     </div>
-                    <div class='row'>
-                        <div class='input-field col s12'>
-                            <input class='validate' type='text' name="birth" id='birth' />
-                            <label for='birth'>Data de Nascimento</label>
-                        </div>
-                    </div>
-                    <br />
-                    <br />
-                    <br />
-                    <center>
-                        <div class='row'>
-                            <button type='submit' name='btn_login'
-                                class='col s12 btn btn-large waves-effect indigo primariColor'>Entrar</button>
-                        </div>
-                    </center>
-                </form>
+                </div>
             </div>
         </div>
+    </div>
+    </div>
 
-        <div id="div-lista-user" style="display:none;">
-    
-            <table  class="highlight">
-                <thead>
-                  <tr>
-                      <th>Nome</th>
-                      <th>CPF</th>
-                      <th>Telefone</th>
-                      <th>Cidade</th>
-                      <th>Data Cadastro</th>
-                  </tr>
-                </thead>
-        
-                <tbody id="table-users">
-                  
-                </tbody>
-              </table>
+    </div>
 
+    <!-- Div Logon -->
+    <div id="div-logon" style="display:none;">
 
+        <div class="z-depth-1 grey lighten-4 row userLogin" style="background-color: #ffffff!important;">
+            <form class="col s12" method="post">
+                <div class='row'>
+                    <div class='col s12'>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='input-field col s12'>
+                        <input class='validate' type='text' name='cpf' id='cpf' />
+                        <label for='cpf'>Digite seu CPF</label>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='input-field col s12'>
+                        <input class='validate' type='text' name="birth" id='birth' />
+                        <label for='birth'>Data de Nascimento</label>
+                    </div>
+                </div>
+                <br />
+                <br />
+                <br />
+                <center>
+                    <div class='row'>
+                        <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo primariColor'>Entrar</button>
+                    </div>
+                </center>
+            </form>
         </div>
-        
-        
-        
+    </div>
+
+    <div id="div-lista-user" style="display:none;">
+
+        <table class="highlight">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>CPF</th>
+                    <th>Telefone</th>
+                    <th>Cidade</th>
+                    <th>Data Cadastro</th>
+                </tr>
+            </thead>
+
+            <tbody id="table-users">
+
+            </tbody>
+        </table>
+
+
+    </div>
+
+
+
     </div>
 
     <div id="div-company" style="display:none;">
