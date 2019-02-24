@@ -18,20 +18,24 @@
 
 </head>
 
-<body >
+<body>
 
     <div>
         <nav id="topMenu" class="primariColor">
-            
+
             <div class="nav-wrapper">
                 <!--
                 <a href="#" class="brand-logo"></a>
                 -->
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Usuários</a></li>
+                    <li><a href="#">Alunos</a></li>
+                    <li><a href="#">Instituição</a></li>
                     <li id="btn-login"><a href="sass.html" style="margin-right:200px">Login</a></li>
-                   <!--
-                    <li><a href="badges.html">Components</a></li>
-                    <li><a href="collapsible.html">JavaScript</a></li>
+                    <!--
                 -->
                 </ul>
             </div>
@@ -46,43 +50,45 @@
 
             <div class="row">
                 <div class="col s12">
-                    <div class="col s6"> <!-- tex g 52  peq 18px  Altura do header 70px-->
+                    <div class="col s6">
+                        <!-- tex g 52  peq 18px  Altura do header 70px-->
                         <p class="titleCadastro">Acesso à assistência júridica gratuita, ágil e eficiente?
-                             <br>Essa é a nossa missão. </p>
-                             <p class="textoCadastro">Coordena um núcleo de Práticas Jurídicas? Experimente nossa ferramenta de gestão de processos. 
-                                 <a href="#"><strong> Cadastre-se-aqui.</strong></a></p>
+                            <br>Essa é a nossa missão. </p>
+                        <p class="textoCadastro">Coordena um núcleo de Práticas Jurídicas? Experimente nossa ferramenta
+                            de gestão de processos.
+                            <a href="#"><strong> Cadastre-se-aqui.</strong></a></p>
                     </div>
                     <div class="col s1">
                     </div>
-                    <form class="col s5" id="form-user-create" >
-                            <br>
+                    <form class="col s5" id="form-user-create">
+                        <br>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="cpf" type="text" class="validate" number>
+                                <input id="cpf" type="text" name="cpf" class="validate" number>
                                 <label for="cpf">CPF</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="name" type="text" class="validate">
+                                <input id="name" name="name" type="text" class="validate">
                                 <label for="name">Nome Completo</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s7">
-                                <input id="birth" type="text" class="validate">
+                                <input id="birth" name="birth" type="text" class="validate">
                                 <label for="birth">Data de Nascimento</label>
 
                             </div>
                             <div class="input-field col s5">
-                                <input id="estadoCivil" type="text" class="validate">
+                                <input id="estadoCivil" name="estadoCivil" type="text" class="validate">
                                 <label for="estadoCivil">Estado Civil</label>
 
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s7">
-                                <input id="telefone" type="text" class="validate">
+                                <input id="telefone" name="telefone" type="text" class="validate">
                                 <label for="telefone">Telefone</label>
 
                             </div>
@@ -93,12 +99,12 @@
 
                         <div class="row">
                             <div class="input-field col s5">
-                                <input id="cep" type="text" class="validate">
+                                <input id="cep" name="cep" type="text" class="validate">
                                 <label for="cep">CEP</label>
 
                             </div>
                             <div class="input-field col s7">
-                                <input id="cidade" type="text" class="validate">
+                                <input id="cidade" name="cidade" type="text" class="validate">
                                 <label for="cidade">Cidade</label>
 
                             </div>
@@ -106,11 +112,11 @@
 
                         <div class="row">
                             <div class="input-field col s9">
-                                <input id="rua" type="text" class="validate">
+                                <input id="rua" name="rua" type="text" class="validate">
                                 <label for="rua">Rua</label>
                             </div>
                             <div class="input-field col s3">
-                                <input id="numero" type="text" class="validate">
+                                <input id="numero" name="numero" type="text" class="validate">
                                 <label for="numero">Nº</label>
                             </div>
                         </div>
@@ -118,12 +124,12 @@
 
                         <div class="row">
                             <div class="input-field col s7">
-                                <input id="bairro" type="text" class="validate">
+                                <input id="bairro" name="bairro" type="text" class="validate">
                                 <label for="bairro">Bairro</label>
 
                             </div>
                             <div class="input-field col s5">
-                                <input id="complemento" type="text" class="validate">
+                                <input id="complemento" name="complemento" type="text" class="validate">
                                 <label for="complemento">Complemento</label>
 
                             </div>
@@ -136,12 +142,13 @@
                         
                         <a class="waves-effect waves-light btn"  type="submit">button</a>
                     -->
-                    <button class="waves-effect waves-light btn primariColor" type="submit"> Buscar núcleos disponível</button>
-                    
-                    <p class="colorText" style="text-align:center"><strong> Já tem cadastro? Veja os núcleos disponíveis para você.</strong></p>
-                
-                
-                </form>
+                        <button class="waves-effect waves-light btn primariColor" type="submit">Salvar</button>
+
+                        <p class="colorText" style="text-align:center"><strong> Já tem cadastro? Veja os núcleos
+                                disponíveis para você.</strong></p>
+
+
+                    </form>
                 </div>
 
 
@@ -155,60 +162,77 @@
 
         <!-- Div Logon -->
         <div id="div-logon" style="display:none;">
-            
-                <div class="z-depth-1 grey lighten-4 row userLogin" >
 
-                        <form class="col s12" method="post">
-                          <div class='row'>
-                            <div class='col s12'>
-                            </div>
-                          </div>
-              
-                          <div class='row'>
-                            <div class='input-field col s12'>
-                              <input class='validate' type='email' name='email' id='email' />
-                              <label for='email'>Enter your email</label>
-                            </div>
-                          </div>
-              
-                          <div class='row'>
-                            <div class='input-field col s12'>
-                              <input class='validate' type='password' name='password' id='password' />
-                              <label for='password'>Enter your password</label>
-                            </div>
-                            
-                          </div>
-              
-                          <br />
-                          <br />
-                          <br />
-                          <center>
-                            <div class='row'>
-                              <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo primariColor'>Login</button>
-                            </div>
-                          </center>
-                        </form>
-                      </div>
+            <div class="z-depth-1 grey lighten-4 row userLogin" style="background-color: #ffffff!important;">
+                <form class="col s12" method="post">
+                    <div class='row'>
+                        <div class='col s12'>
+                        </div>
                     </div>
-
+                    <div class='row'>
+                        <div class='input-field col s12'>
+                            <input class='validate' type='text' name='cpf' id='cpf' />
+                            <label for='cpf'>Digite seu CPF</label>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='input-field col s12'>
+                            <input class='validate' type='text' name="birth" id='birth' />
+                            <label for='birth'>Data de Nascimento</label>
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <br />
+                    <center>
+                        <div class='row'>
+                            <button type='submit' name='btn_login'
+                                class='col s12 btn btn-large waves-effect indigo primariColor'>Entrar</button>
+                        </div>
+                    </center>
+                </form>
+            </div>
         </div>
 
+        <div id="div-lista-user" style="display:none;">
+    
+            <table  class="highlight">
+                <thead>
+                  <tr>
+                      <th>Nome</th>
+                      <th>CPF</th>
+                      <th>Telefone</th>
+                      <th>Cidade</th>
+                      <th>Data Cadastro</th>
+                  </tr>
+                </thead>
+        
+                <tbody id="table-users">
+                  
+                </tbody>
+              </table>
 
-
-
-        <div id="div-company" style="display:none;">
 
         </div>
+        
+        
+        
+    </div>
+
+    <div id="div-company" style="display:none;">
+
+    </div>
 
 
 
 
     </div>
-   
+
 
 
     <script src="./js/jquery.js"></script>
     <script type="text/javascript" src="./materialize/js/materialize.min.js"></script>
+    <script src="./classes/Utils.js"></script>
     <script src="./models/User.js"></script>
     <script src="./controller/UserController.js"></script>
     <script src="./controller/MenuControler.js"></script>
