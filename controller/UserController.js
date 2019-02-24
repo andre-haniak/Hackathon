@@ -1,9 +1,9 @@
-class UserController{
+class UserController {
 
-    constructor(formIdCreate){
+    constructor(formIdCreate) {
         this.formCreateEl = document.getElementById(formIdCreate)
 
-        this.onSubmit() 
+        this.onSubmit()
     }
 
 
@@ -17,7 +17,13 @@ class UserController{
             if (!values) {
                 return false;
             }
+
+            values.save();
+            alert('Usuário inserido com sucesso!')
+            this.formCreateEl.reset();
             btn.disabled = false;
+
+
         })
     }
 
@@ -26,53 +32,24 @@ class UserController{
     getValues(formEl) {
         let user = {};
         let isValid = true;
-        /**
-         * Spred utilizado para percorer como array um objeto.
-         */
 
-        console.log(formEl.elements);
-        
+
         [...formEl.elements].forEach(function (field, index) {
-
-            console.log(field)
-/*
-            if (['name', 'email', 'password'].indexOf(field.name) > -1 && !field.value) {
-                field.parentElement.classList.add('has-error');
-                isValid = false;
-            }
-
-            if (field.name == 'gender') {
-                if (field.checked) {
-                    user[field.name] = field.value;
-                }
-            } else if (field.name == 'admin') {
-                user[field.name] = field.checked;
-            } else {
-                user[field.name] = field.value;
-            }
-
-*/
+            user[field.name] = field.value;
         })
 
-        /*
-        if (!isValid) {
-
-            return false;
-        }
-        */
-
-       this._id;
-       this._name = name;
-       this._cpf = cpf;
-       this._telefone = telefone;
-       this._birth = birth;
-       this._estadoCivil = estadoCivil;
-       this._cidade = cidade;
-       this._cep = cep;
-       this._rua = rua;
-       this._complemento = complemento;
-       this._numero = numero;
-       this._register = new Date();
+        this._id;
+        this._name = name;
+        this._cpf = cpf;
+        this._telefone = telefone;
+        this._birth = birth;
+        this._estadoCivil = estadoCivil;
+        this._cidade = cidade;
+        this._cep = cep;
+        this._rua = rua;
+        this._complemento = complemento;
+        this._numero = numero;
+        this._register = new Date();
         return new User(
             user.name,
             user.cpf,
@@ -83,8 +60,39 @@ class UserController{
             user.cep,
             user.rua,
             user.complemento,
-            user.numero
+            user.numero,
+            user.register
         );
     }
 
+    CarregarUsuarios(value) {
+        let users = User.getUsersStorage()
+        let tableEl = value.querySelector('#table-users')
+        console.dir(tableEl)
+        users.forEach((userData, index) => {
+            let tr = this.getTr(userData);
+            tableEl.appendChild(tr);
+        })
+    }
+
+    getTr(dataUser, tr = null) {
+        if (tr === null) {
+            tr = document.createElement('tr');
+        }
+        tr.dataset.user = JSON.stringify(dataUser);
+
+        tr.innerHTML = `
+            <td>${dataUser.name}</td>
+            <td>${dataUser.cpf}</td>
+            <td>${dataUser.telefone}</td>
+            <td>${dataUser.cidade}</td>
+            <td>${Utils.dateFormat(dataUser.register)}</td>
+            <td>
+                <button type="button" class="btn btn-primary btn-edit btn-xs btn-flat">Editar</button>
+                <button type="button" class="btn btn-danger  btn-delete btn-xs btn-flat">Excluir</button>
+            </td>
+        `;
+        //this.addEventsTr(tr);
+        return tr;
+    }
 }
